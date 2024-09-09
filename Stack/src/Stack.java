@@ -17,5 +17,13 @@ public class Stack {
         top = newnode;
         height=1;
     }
-    
+
+    public void printStack(){
+        Node temp = top;
+        while (temp !=null){
+            System.out.println(temp.value);
+            temp = temp.Next;
+        }
+    }
+
 }
