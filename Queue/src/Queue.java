@@ -66,7 +66,13 @@ public class Queue {
 
         if (lenght==0){
             return null;
-        }else {
+        }
+
+        if (lenght ==1) {
+            first=null;
+            last=null;
+        }
+        else {
           first = temp.next;
           temp.next=null;
         }
