@@ -30,6 +30,8 @@ public class Queue {
             System.out.println("Value : " + temp.value);
             temp=temp.next;
         }
+
+        System.out.println("---------------------------");
     }
 
     public void getfirst(){
@@ -42,6 +44,35 @@ public class Queue {
 
     public void getlenght(){
         System.out.println("Length : " + lenght);
+    }
+
+    public void Enqueue(int value){
+        Node newnode = new Node(value);
+
+        if (lenght == 0) {
+            first = newnode;
+            last=newnode;
+        }else{
+            last.next=newnode;
+            last=newnode;
+        }
+
+        lenght++;
+    }
+
+    public Node Dequeue(){
+        Node temp = first;
+
+
+        if (lenght==0){
+            return null;
+        }else {
+          first = temp.next;
+          temp.next=null;
+        }
+
+        lenght--;
+        return temp;
     }
 
 
