@@ -51,4 +51,22 @@ public class Stack {
         height++;
     }
 
+    public Node Pop(){
+
+        Node temp = top;
+        if(height==0){
+            return null ;
+        }
+
+        else if (height == 1) {
+            top = null;
+        }
+        else {
+            top=temp.Next;
+            temp.Next=null;
+        }
+        height--;
+        return temp;
+    }
+
 }

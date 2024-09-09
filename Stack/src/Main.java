@@ -11,5 +11,10 @@ public class Main {
         newstack.Push(4);
 
         newstack.printStack();
+
+
+        newstack.Pop();
+
+        newstack.printStack();
     }
 }
