@@ -12,7 +12,17 @@ public class Main {
         bst.insert(4);
         bst.insert(6);
 
+        bst.InsertWithloops(40);
+        bst.InsertWithloops(90);
+
         bst.print();
+
+        bst.Contain(90);
+
+       boolean contain =  bst.Contain(444);
+       if (contain == false){
+           System.out.println("NOOOO this value not exist in this tree");
+       }
 
     }
 }
